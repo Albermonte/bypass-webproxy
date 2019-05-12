@@ -241,7 +241,8 @@ func proxyHandler(resWriter http.ResponseWriter, reqHTTP *http.Request) *reqErro
 			}
 		})
 
-		payload := fmt.Sprintf("<div id='shortnim_addon'></div><script type='text/javascript' src='https://cdn.jsdelivr.net/gh/Albermonte/shortnim-addon@0.1.2/dist/js/app.4df45359.js' defer></script>")
+		//payload := fmt.Sprintf("<div id='shortnim_addon'></div><script type='text/javascript' src='https://cdn.jsdelivr.net/gh/Albermonte/shortnim-addon@0.1.2/dist/js/app.4df45359.js' defer></script>")
+		payload := "<div id='shortnim_addon'></div><script type='text/javascript' src='https://cdn.jsdelivr.net/gh/Albermonte/shortnim-addon@0.1.2/dist/js/app.4df45359.js' defer></script>"
 
 		prox.Document.Find("body").
 			AppendHtml(payload).
